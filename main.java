@@ -4,19 +4,17 @@ import java.util.Scanner;
 
 public class main{
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
-  
-        if (a>b && a>c) {
-            System.out.println("a is greater ");
-        }
-        else if (b>a && b>c) {
-            System.out.println("b is greater ");
-        }
-        else{
-            System.out.println(" c is greater ");
+        String str = "Hello";
+        String str2 = "World";
+        HashSet<String> set = new HashSet<>();
+        set.add(str);
+        set.add(str2);
+        for(int i =0; i<str2.length(); i++){
+            if(set.contains(String.valueOf(str2.charAt(i)))){
+                System.out.println("Character " + str2.charAt(i) + " is present in the set.");
+            } else {
+                System.out.println("Character " + str2.charAt(i) + " is not present in the set.");
+            }
         }
     }
 }
